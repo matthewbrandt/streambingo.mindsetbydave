@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreamBingo | MindsetByDave Edition</title>
+  <meta name="description" content="Play Bingo on livestream with MindsetByDave!">
+  <meta name="author" content="mattytwoshoes">
+  <meta property="og:title" content="StreamBingo.MindsetByDave">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Play Bingo on livestream with MindsetByDave!">
+  <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css?v=1.0">
+</head>
+
+<body>
+  <header>
+    <h1>MindsetByDave Stream Bingo</h1>
+  </header>
+  <main>
+    <div id="bingoBoardWrapper" class="boardWrapper">
+    <table id="bingoBoard" class="board">
+        <tr>
+            <td data-position=0></td>
+            <td data-position=1></td>
+            <td data-position=2></td>
+            <td data-position=3></td>
+            <td data-position=4></td>
+        </tr>
+        <tr>
+            <td data-position=5></td>
+            <td data-position=6></td>
+            <td data-position=7></td>
+            <td data-position=8></td>
+            <td data-position=9></td>
+        </tr>
+            <tr>
+            <td data-position=10></td>
+            <td data-position=11></td>
+            <td data-position=12 id="freeTile" class="marked">🥑</td>
+            <td data-position=13></td>
+            <td data-position=14></td>
+        </tr>
+            <tr>
+            <td data-position=15></td>
+            <td data-position=16></td>
+            <td data-position=17></td>
+            <td data-position=18></td>
+            <td data-position=19></td>
+        </tr>
+            <tr>
+            <td data-position=20></td>
+            <td data-position=21></td>
+            <td data-position=22></td>
+            <td data-position=23></td>
+            <td data-position=24></td>
+        </tr>
+      </table>
+    </div>
+    <div id="noBoard" class="noboard">
+      <div id="twitch-embed" class="twitch-video"></div>
+      <div class="instructions">
+          <p class="mindsetver">This is a special edition of streambingo.party for Dave!</p>
+          <p>These are the Stream Bingo rules:
+            <ul>
+              <li>Bingo requires 5 highlighted tiles</li>
+              <li>The 5 highlighted tiles must be adjacent</li>
+              <li>The row of 5 must be vertical or horizontal</li>
+            </ul>
+          </p>
+          <div class="spacer"></div>
+          <p>If you're seeing this message...</p>
+          <p>...ask <span class="streamer">Dave</span> to use the following button to generate a board randomly.</p>
+          <button onclick="generateBoard()">generate</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <h2>
+      Developed by <a target="_blank" href="https://github.com/matthewbrandt/streambingo.party">mattytwoshoe<span>s</span></a>
+      <br>
+      <div class="version">v1.1-mindsetbydave</div>
+    </h2>
+  </footer>
+  <script src="app.js"></script>
+  <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+    <script type="text/javascript">
+        new Twitch.Player("twitch-embed", {
+            channel: "mindsetbydave",
+            muted: true,
+            height: 360,
+            width: 720
+        });
+    </script>
+</body>
+</html>
